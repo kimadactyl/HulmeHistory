@@ -10,61 +10,56 @@
     <title>Hulme History</title>
 
     <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/all.js" type="text/javascript"></script>
-
-    <style>
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+    <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="javascripts/all.js" type="text/javascript"></script>
   </head>
 
   <body class="index">
-    <style>
-.menu-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;right:10px;
-  z-index:1;
-  border-radius:3px;
-  width:120px;
-  border:1px solid rgba(0,0,0,0.4);
-}
-.menu-ui a {
-  font-size:13px;
-  color:#404040;
-  display:block;
-  margin:0;padding:0;
-  padding:10px;
-  text-decoration:none;
-  border-bottom:1px solid rgba(0,0,0,0.25);
-  text-align:center;
-}
-.menu-ui a:first-child {
-  border-radius:3px 3px 0 0;
-}
-.menu-ui a:last-child {
-  border:none;
-  border-radius:0 0 3px 3px;
-}
-.menu-ui a:hover {
-  background:#f8f8f8;
-  color:#404040;
-}
-.menu-ui a.active {
-  background:#3887BE;
-  color:#FFF;
-}
-.menu-ui a.active:hover {
-  background:#3074a4;
-}
-</style>
-<nav id='menu-ui' class='menu-ui'></nav>
-<div id='map'></div>
+    <nav id='menu-ui' class='menu-ui'></nav>
+
+<section id='timeline'>
+  <div id='listholder'>
+    <ol>
+        <li>1993 <a href="/events/1993-yellowbricks/">Work For Change</a></li>
+        <li>1911 <a href="/events/1911-zion-centre/">Zion Centre/Chapel rebuild</a></li>
+        <li>1884 <a href="/events/1884-rolls-royce/">Rolls Royce factory</a></li>
+        <li>1845 <a href="/events/1845-hulme-hall/">Hulme Hall</a></li>
+        <li>1980 <a href="/events/1980-madchester/">Madchester</a></li>
+        <li>1901 <a href="/events/1901-hulme-hippodrome/">Playhouse Theatre</a></li>
+        <li>1920 <a href="/events/1920-poc-immigrant-communities/">PoC immigrant communities</a></li>
+        <li>2014 <a href="/events/2014-birley-fields-campus/">Birley Fields Campus</a></li>
+        <li>1840 <a href="/events/1840-industrial-city/">Industrial City</a></li>
+        <li>1992 <a href="/events/1992-health-and-hulme-report/">Health and Hulme Report</a></li>
+        <li>1990 <a href="/events/1990-crescent-culture/">Crescents Culture</a></li>
+        <li>1988 <a href="/events/1988-russell-club/">PSV Club/Russell Club</a></li>
+        <li>1986 <a href="/events/1986-viraj-mendis/">Viraj Mendis/Church of the ascension</a></li>
+        <li>1999 <a href="/events/1999-garden-centre/">Garden Centre</a></li>
+        <li>1960 <a href="/events/1960-slum-clearances/">"Slum" clearances</a></li>
+        <li>2005 <a href="/events/2005-crucifix-for-a-tree/">Crucifix for a tree</a></li>
+        <li>1761 <a href="/events/1761-bridgewater-canal-connected/">Bridgewater Canal reached Castlefield</a></li>
+        <li>1961 <a href="/events/1961-the-mancunian-way/">Mancunian way</a></li>
+        <li>2000 <a href="/events/2000-red-bricks-cinema/">Red Bricks Cinema</a></li>
+        <li>1974 <a href="/events/1974-crescents-built/">Crescents Built</a></li>
+        <li>1761 <a href="/events/1761-industrial-revolution/">Industrial Revolution</a></li>
+        <li>1994 <a href="/events/1994-new-hulme/">New Hulme?</a></li>
+        <li>1826 <a href="/events/1826-church-st-george/">Church of St George</a></li>
+        <li>1939 <a href="/events/1939-second-world-war/">World War II</a></li>
+        <li>2000 <a href="/events/2000-hulme-park/">Hulme Park</a></li>
+        <li>1940 <a href="/events/1940-redbricks-bentley/">Red Bricks/Bentley House</a></li>
+        <li>1901 <a href="/events/1905-hulme-hippodrome-2/">Hulme Hippodrome</a></li>
+        <li>1914 <a href="/events/1914-first-world-war/">World War I</a></li>
+        <li>1992 <a href="/events/1992-hulme-city-challenge/">Hulme City Challenge</a></li>
+        <li>1885 <a href="/events/1885-shipping-canal-act-passed/">Shipping Canal Act passed</a></li>
+        <li>2002 <a href="/events/2002-commonwealth-games/">Commonwealth Games</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id='map'></section>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoia2ltYWRhY3R5bCIsImEiOiJCYzdNTTR3In0.hkjyGpEFYdSPrVp3e717eA';
-var map = L.mapbox.map('map').setView([53.467,-2.25], 15);
+var map = L.mapbox.map('map').setView([53.468,-2.260], 15);
 var layers = document.getElementById('menu-ui');
 
 // Colour defs
