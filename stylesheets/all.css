@@ -3467,28 +3467,61 @@ th.hide-for-touch { display: table-cell !important; }
 /* line 6, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 body { margin: 0; padding: 0; }
 
-/* line 10, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+/* line 12, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#map { position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; }
 
-/* line 16, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
-#timeline { position: absolute; top: 10px; left: 10px; bottom: 10px; width: 30%; z-index: 100; background-color: rgba(200, 200, 200, 0.5); }
-/* line 24, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
-#timeline li { list-style-type: none; }
+/* line 23, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#timeline { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; top: 0px; left: 0px; bottom: 0px; padding-bottom: 20em; width: 30%; z-index: 100; background-color: rgba(200, 200, 200, 0.5); padding: 0.5rem; overflow: hidden; }
 
-/* line 28, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 40, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#tl-content { width: 100%; height: 99%; overflow: auto; padding-right: 15px; }
+
+/* line 45, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#crossbar { position: relative; width: 30%; height: 5px; background-color: #a00; opacity: 0.5; z-index: 1000; top: 1.5em; }
+
+/* line 53, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#listholder { position: absolute; height: 100%; display: flex; justify-content: space-around; flex-wrap: wrap; align-items: stretch; }
+/* line 60, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+#listholder .active { background-color: #ff0000; }
+
+/* line 65, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+ol { margin: 0; padding: 0; text-align: center; }
+
+/* line 70, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+ol.decades > li { margin-left: 0em; width: 100%; list-style-type: none; display: inline-block; }
+
+/* line 76, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+ol.decades li ol { margin-left: 2.5em; }
+
+/* line 79, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+time.decade { font-size: 80%; float: left; color: #666; padding-top: 0.1em; min-height: 3rem; }
+
+/* line 86, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+li.event { font-size: 90%; display: inline-block; width: 100%; padding: 0.5rem; border-radius: 0.25rem; margin: 0.25rem; margin-bottom: 1rem; background-color: #ED6D4A; }
+
+/* line 97, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+li.news { background-color: #FFCA64; }
+
+/* line 100, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+li.buildings { background-color: #3FD97F; }
+
+/* line 103, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+li.community { background-color: #ED6D4A; }
+
+/* line 106, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .leaflet-control-zoom { display: none; }
 
-/* line 31, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 109, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui { background: #fff; position: absolute; top: 10px; right: 10px; z-index: 1; border-radius: 3px; width: 120px; border: 1px solid rgba(0, 0, 0, 0.4); }
-/* line 40, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 118, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a { font-size: 13px; color: #404040; display: block; margin: 0; padding: 0; padding: 10px; text-decoration: none; border-bottom: 1px solid rgba(0, 0, 0, 0.25); text-align: center; }
-/* line 50, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 128, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a:first-child { border-radius: 3px 3px 0 0; }
-/* line 52, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 130, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a:last-child { border: none; border-radius: 0 0 3px 3px; }
-/* line 55, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 133, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a:hover { background: #f8f8f8; color: #404040; }
-/* line 58, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 136, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a.active { background: #3887BE; color: #FFF; }
-/* line 61, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
+/* line 139, /home/kim/HulmeHistory/source/stylesheets/all.css.sass */
 .menu-ui a.active:hover { background: #3074a4; }
